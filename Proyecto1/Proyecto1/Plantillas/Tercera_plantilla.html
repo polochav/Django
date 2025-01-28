@@ -1,0 +1,40 @@
+<html>
+    <body>
+
+        {% include "superior/barra.html" %}
+
+        <h1 style="color: red;">
+            Mi nombre instanciando una clase en la vista es: {{Nombre.upper}} {{Apellido.upper}}
+        </h1>
+
+        {% if Nombre == "Leopoldo" %}
+            <p>El curso es tomado por el alumno: {{Nombre}} {{Apellido}}</p>
+
+            {% else %}
+                <p>El curso es tomado por alguien que no es Leopoldo Chavarría</p>
+        {% endif %}
+
+
+        <h2>
+            Los temas a tratar en el curso de djnago entre muchos otros son: 
+        </h2>
+        <ul>
+            {%if Temas%}
+                {% for i in Temas%}
+                    <li>{{i|first|lower}}</li>
+                {% endfor %}
+            {% else %}
+                <p>No hay elementos que mostrar, la lista está vacía</p>
+            {% endif %}
+        </ul>
+        
+        {% comment %}
+            esto es un 
+            comentario de 
+            múltiples 
+            líneas y no se ve
+        {% endcomment %}
+
+
+    </body>
+</html>
