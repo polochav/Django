@@ -5,7 +5,7 @@ from django.template.loader import get_template
 from django.shortcuts import render
 
 
-# ======MOSTRANDO CONTENIDO ESTÁTICO======
+# ======MOSTRANDO CONTENIDO ESTÁTICO=====
 
 
 def saludo(request):  # PRIMERA VISTA CARGANDO UNA PLANTILLA DESDE UN ARCHIVO
