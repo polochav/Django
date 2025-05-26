@@ -55,7 +55,7 @@ ROOT_URLCONF = 'TiendaOnline.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['/Users/leopoldochavarria/Documents/Programacion/Django/TiendaOnline/Templates'],
+        'DIRS': ['/home/polo/Documentos/Programacion/Django/Django/TiendaOnline/Templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
