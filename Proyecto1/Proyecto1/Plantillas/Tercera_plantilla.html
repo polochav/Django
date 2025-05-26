@@ -21,7 +21,7 @@
         <ul>
             {%if Temas%}
                 {% for i in Temas%}
-                    <li>{{i|first|lower}}</li>
+                    <li>{{i|first|lower}}</li> {#encadenacion de filtros#}
                 {% endfor %}
             {% else %}
                 <p>No hay elementos que mostrar, la lista está vacía</p>

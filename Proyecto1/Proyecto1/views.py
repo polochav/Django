@@ -10,7 +10,7 @@ from django.shortcuts import render
 
 def saludo(request):  # PRIMERA VISTA CARGANDO UNA PLANTILLA DESDE UN ARCHIVO
     # PRIMERA FORMA DE DAR ESTILOS HTML (FORMA MUY SIMPLE)
-    return HttpResponse("<html><body><h1>Hola amigos:)))</h1><body></html>")
+    return HttpResponse("<html><body><h1>Hola amigos:))) regresé al curso de djagno</h1><body></html>")
 
 
 def despedida(request):
@@ -61,10 +61,10 @@ def fecha(request):
 # =====PASAR PARÁMETROS POR URL======
 
 
-# EL VALOR AGNO ES PASADO COMO PARÁMETRO AL MOMENTO DE ESCRIBIR LA URL EN EL NAVEGADOR A LA SIGUIENTE VISTA
-def calcula_edad(request, agno):  # Primera vez que la vistarecibe otro parámetro
+# EL VALOR ANIO ES PASADO COMO PARÁMETRO AL MOMENTO DE ESCRIBIR LA URL EN EL NAVEGADOR A LA SIGUIENTE VISTA
+def calcula_edad(request, anio):  # Primera vez que la vista recibe otro parámetro
     edad_actual = 20
-    periodo = agno - 2024
+    periodo = anio - 2024
     edad_futura = edad_actual + periodo
     documento = """
     <html>
@@ -74,7 +74,7 @@ def calcula_edad(request, agno):  # Primera vez que la vistarecibe otro parámet
     </h1>
     </body>
     </html>""" % (
-        agno,
+        anio,
         edad_futura,
     )
 
@@ -83,8 +83,8 @@ def calcula_edad(request, agno):  # Primera vez que la vistarecibe otro parámet
 
 # ======PASAR DOS O MÁS PARÁMETROS POR URL========
 
-def calcula_edad2(request, edad, agno):  # Primera vez que la vistarecibe otro parámetro
-    periodo = agno - 2024
+def calcula_edad2(request, edad, anio):  # Primera vez que la vistarecibe otro parámetro
+    periodo = anio - 2024
     edad_futura = edad + periodo
     documento = """
     <html>
@@ -94,7 +94,7 @@ def calcula_edad2(request, edad, agno):  # Primera vez que la vistarecibe otro p
     </h1>
     </body>
     </html>""" % (
-        agno,
+        anio,
         edad_futura,
     )
 
@@ -119,6 +119,7 @@ def saludo2(request):
 
 # SEGUNDA VISTA CARGANDO UNA PLANTILLA DESDE UN ARCHIVO EXTERNO CON VARIABLES
 def fecha2(request):
+    
     fecha = datetime.datetime.now()
 
     doc_externo = open("/Users/leopoldochavarria/Documents/Programacion/Django/Proyecto1/Proyecto1/Plantillas/Segunda_plantilla.html")
